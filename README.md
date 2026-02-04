@@ -5,6 +5,7 @@
 * Logitech Driving Force Shifter (Used with G29, G920, and G923 steering wheels)
 * Arduino UNO R3 (with atmega 16u2 chip or equivalent)
 * USBasp programmer or other ISP programmer
+* Male DB9 to Breakout Board adapter (the shifter will plug into this)
 * [Arduino IDE](https://www.arduino.cc/en/software)
 * [HoodLoader2 by NicoHood](https://github.com/NicoHood/HoodLoader2)
 
