@@ -23,6 +23,10 @@ The pinout is the same for the Arduino Uno
 
 ## Testing
 
+### Optional:
+
+If you want to get the values correct for the axes and buttons - use the debug sketch, this needs the Arduino to be in normal (non Hoodloader2)
+
 ### Windows:
 
 1. Open Settings
