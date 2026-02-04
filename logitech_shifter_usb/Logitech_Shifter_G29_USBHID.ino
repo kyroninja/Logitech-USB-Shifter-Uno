@@ -20,6 +20,18 @@ void setup()
   // Initialize gamepad
   Gamepad.begin();
 
+  // Reinit to zero
+  Gamepad.rxAxis(0);
+  Gamepad.ryAxis(0);
+  Gamepad.rzAxis(0);
+
+  Gamepad.xAxis(0);
+  Gamepad.yAxis(0);
+  Gamepad.zAxis(0);
+  
+  Gamepad.dPad1(GAMEPAD_DPAD_CENTERED);
+  Gamepad.dPad2(GAMEPAD_DPAD_CENTERED);
+
   // Optional: initial report to clear state
   Gamepad.write();
 }
