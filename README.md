@@ -16,7 +16,7 @@ The pinout is the same for the Arduino Uno
 ## Setup
 
 1. Install the [Arduino IDE](https://www.arduino.cc/en/software)
-2. Install Hoodloader2
+2. Install [Hoodloader2](https://github.com/NicoHood/HoodLoader2)
 3. Open Logitech_Shifter_G29_USBHID.ino and select "HoodLoader2 16u2" under board. Then use upload via programmer (connect ISP programmer first to 16u2 chip)
 4. Open Logitech_Shifter_G29_Main.ino and select "HoodLoader2 Uno" under board. Then use upload programmer (connect ISP to atmega328p chip)
 5. Plug the Arduino into the PC
