@@ -3,32 +3,33 @@
 ## Prerequisites
 
 * Logitech Driving Force Shifter (Used with G29, G920, and G923 steering wheels)
-* Arduino Leonardo or Arduino Micro
+* Arduino UNO R3 (with atmega 16u2 chip or equivalent)
+* USBasp programmer or other ISP programmer
 * [Arduino IDE](https://www.arduino.cc/en/software)
-* [Arduino Joystick Library](https://github.com/MHeironimus/ArduinoJoystickLibrary)
+* [HoodLoader2 by NicoHood](https://github.com/NicoHood/HoodLoader2)
 
 ## Wiring
 
-![Shifter to Arduino wiring](/logitech_shifter_usb/images/wiring.png)
-The pinout is the same for the Arduino Micro.
+![Shifter to Arduino wiring](/logitech_shifter_usb/wiring2.jpg)
+The pinout is the same for the Arduino Uno
 
 ## Setup
 
 1. Install the [Arduino IDE](https://www.arduino.cc/en/software)
-2. Plug the Arduino into the PC
-3. Open `logitech_shifter_usb.ino`
-4. Follow the installation instructions for the [Arduino Joystick Library](https://github.com/MHeironimus/ArduinoJoystickLibrary)
-5. In the Arduino IDE, select `Tools`-> `Board` -> `Arduino Leonardo` or `Arduino Micro` depending on the board you are using.
-6. In the Arduino IDE, select `Tools`-> `Port` -> Select the device to put the code on, it should look something like `COM3 (Arduino Leonardo)`.
-7. Press the upload button.
+2. Install Hoodloader2
+3. Open Logitech_Shifter_G29_USBHID.ino and select "HoodLoader2 16u2" under board. Then use upload via programmer (connect ISP programmer first to 16u2 chip)
+4. Open Logitech_Shifter_G29_Main.ino and select "HoodLoader2 Uno" under board. Then use upload programmer (connect ISP to atmega328p chip)
+5. Plug the Arduino into the PC
 
 ## Testing
 
 ### Windows:
 
-1. Open Control Panel from the Start Menu
-2. Under "Hardware and sound", click on "View devices and printers"
-3. The Arduino should show up as a gamepad. Right-click the Arduino and click on "Properties"
-4. Go to the "Test" tab and push the shifter into each gear. If buttons 1, 2, 3, 4, 5, 6 and 8 can all be seen as pressed (not at the same time), everything is working as it should.
+1. Open Settings
+2. Click "Bluetooth and Devices"
+3. Click "More Devices and Printer Settings"
+4. Look for a device called "HoodLoader 16u2" (This should have like a Gamepad Icon)
+6. Right-click the "HoodLoader 16u2" and click on "Properties"
+7. Go to the "Test" tab and push the shifter into each gear. If buttons 1, 2, 3, 4, 5, 6 and 7 can all be seen as pressed (not at the same time), everything is working as it should.
 
-If the shifter reports being in 3rd/4th when it is in 5th/6th or 1st/2nd, adjust the values in `X_LEFT` or `X_RIGHT` and reupload the code to the arduino.
+If the shift values dont align - you have to adjust the code in the main file thats uploaded to the 328p
