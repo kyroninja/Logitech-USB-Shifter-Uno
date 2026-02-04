@@ -10,7 +10,7 @@
 
 ## Wiring
 
-![Shifter to Arduino wiring](/logitech_shifter_usb/wiring2.jpg)
+![Shifter to Arduino wiring](/logitech_shifter_usb/images/wiring2.jpg)
 The pinout is the same for the Arduino Uno
 
 ## Setup
